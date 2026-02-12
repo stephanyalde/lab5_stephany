@@ -9,8 +9,10 @@ app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname, 'index.html'));
 app.use(express.urlencoded({ extended: true }));
 
-app.post('/', (req, res) => {
-  res.send('accepted');
+app.post('/login', (req, res) => {
+  res.send('Login accepted');
+  app.use(express.urlencoded({ extended: true }));
+
 });
 
 });
