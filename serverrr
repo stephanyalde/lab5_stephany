@@ -8,6 +8,7 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
 res.sendFile(path.join(__dirname, 'index.html'));
 app.use(express.urlencoded({ extended: true }));
+console.log(req.body);
 
 app.post('/login', (req, res) => {
   res.send('Login accepted');
